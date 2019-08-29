@@ -2,11 +2,20 @@
 We only used necessary functions from libraries : (malloc, free, write, dup2, etc.) everything else was coded from scratch, like printf, <string.h> and such.  
 No leaks, no crashes. (Satisfied or reimbursed!)
 
-# Main Program Flow :
+# Features :
 
-Prompt->Integrity(quotes/backslash/alias)  
-Lexing->Preparsing->Parsing/AST  
-Expansions->Interpretation->Execution
+- Line Edition  
+- Builtins  
+- Environment gestion  
+- Hash Table  
+- Job Control  
+- Inhibitions  
+- Advanced expansion  
+- Signals handling  
+- Pipe/Redirection/File description aggregation  
+- Heredoc
+- 
+
 
 # Line edition :
 
@@ -30,15 +39,12 @@ Use of the termcaps library (40 years old, really bad overall, but follows our p
   
 Also handles quote, dquote, backslash, heredoc reprompt. (Inhibition)
 
-# Redirections :
+# Redirections/Operators :
 
-`>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`
-
-# Operators :
-
+`>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`  
 `;` ,`&&`, `||`, `|`, `&`
 
 # Builtins :
 
-`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`  
+`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`, `set`, `unset`, `export` 
 All builtins follow the posix norm.

@@ -26,7 +26,7 @@ You can use `./42sh --ast` to see the AST (Abstract Syntax Tree) for each comman
 - A lot of other stuff I forgot.
 
 
-# Line edition :
+# Bindings
 
 Use of the termcaps library (40 years old, really bad overall, but follows our philosophy of doing everything from scratch, or with really low level functions)
 
@@ -48,18 +48,20 @@ Use of the termcaps library (40 years old, really bad overall, but follows our p
   
 Also handles quote, dquote, backslash, heredoc reprompt. (Inhibition)
 
+# Redirections/Operators
 -Redirections/Operators :
 
 `>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`  
 `;` ,`&&`, `||`, `|`, `&`
 
-- Builtins :
+# Builtins :
 
 `cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`, `set`, `unset`, `export`  
 
 All builtins follow the posix norm.
 
-- Cloc :
+# Cloc :
+
 ```
 334 text files.
 334 unique files.

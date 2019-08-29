@@ -1,3 +1,4 @@
+![screenshot](https://github.com/Hab5/42sh/blob/master/screenshots/screenshot.png)
 42sh is a complete shell coded from scratch with a couple friends from the 42 school in Paris.  
 We only used necessary functions from libraries : (malloc, free, write, dup2, etc.) everything else was coded from scratch, like printf, <string.h> and such.  
 No leaks, no crashes. (Satisfied or reimbursed!)
@@ -14,7 +15,7 @@ No leaks, no crashes. (Satisfied or reimbursed!)
 - Signals handling  
 - Pipe/Redirection/File description aggregation  
 - Heredoc
-- 
+- A lot of other stuff I forgot.
 
 
 # Line edition :
@@ -39,12 +40,12 @@ Use of the termcaps library (40 years old, really bad overall, but follows our p
   
 Also handles quote, dquote, backslash, heredoc reprompt. (Inhibition)
 
-# Redirections/Operators :
+-Redirections/Operators :
 
 `>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`  
 `;` ,`&&`, `||`, `|`, `&`
 
-# Builtins :
+- Builtins :
 
-`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`, `set`, `unset`, `export` 
+`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`, `set`, `unset`, `export`  
 All builtins follow the posix norm.

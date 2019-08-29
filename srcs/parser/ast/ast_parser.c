@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ast_parser.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apruvost <apruvost@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hab <hab@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 02:30:45 by mbellaic          #+#    #+#             */
-/*   Updated: 2019/08/27 07:46:10 by apruvost         ###   ########.fr       */
+/*   Updated: 2019/08/29 21:06:20 by hab              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_ast			*nud(t_token *t)
 {
 	if (t->type == CMD)
 		return (node_ast(t, NULL, NULL));
-	else if (OP && MORE_OP)
+	else if (OP || MORE_OP)
 	{
 		ft_putstr("42sh: parse error near: ");
 		ft_putendl(t->data);

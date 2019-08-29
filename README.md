@@ -1,4 +1,16 @@
-# 42sh
+42sh is a complete shell coded from scratch with a couple friends from the 42 school in Paris.  
+We only used necessary functions from libraries : (malloc, free, write, dup2, etc.) everything else was coded from scratch, like printf, <string.h> and such.  
+No leaks, no crashes. (Satisfied or reimbursed!)
+
+# Main Program Flow :
+
+Prompt->Integrity(quotes/backslash/alias)  
+Lexing->Preparsing->Parsing/AST  
+Expansions->Interpretation->Execution
+
+# Line edition :
+
+Use of the termcaps library (40 years old, really bad overall, but follows our philosophy of doing everything from scratch, or with really low level functions)
 
 |Binding                         |Effect                        |
 |--------------------------------|-----------------------------:|
@@ -12,8 +24,21 @@
 |`Alt+X`                         |**Cut the selection**|
 |`Alt+C`                         |**Copy the selection**|
 |`Alt+V`                         |**Paste the selection**|
-|`Tab`                           |**Autocompletion(TODO/BONUS)**|
-|`Ctrl+R`                        |**Search in the history(TODO/BONUS)**|
-|`Ctrl+L`                        |**Clear(TODO)**|
+|`Ctrl+R`                        |**Iterative search in the history**|
 |`Ctrl+C`                        |**Discard the current input and prompt on a new line**|
 |`Ctrl+D`                        |**Exit**|
+  
+Also handles quote, dquote, backslash, heredoc reprompt. (Inhibition)
+
+# Redirections :
+
+`>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`
+
+# Operators :
+
+`;` ,`&&`, `||`, `|`, `&`
+
+# Builtins :
+
+`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`  
+All builtins follow the posix norm.

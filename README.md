@@ -1,3 +1,4 @@
+## 42sh  
 <img src="screenshots/screenshot.png" width="400" height="450">
 42sh is a complete shell coded from scratch with a couple friends from the 42 school in Paris.  
 We only used necessary functions from libraries : (malloc, free, write, dup2, etc.) everything else was coded from scratch, like printf, <string.h> and such.  

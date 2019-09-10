@@ -5,12 +5,12 @@
 It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()` and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such)  
 *NO LEAKS, NO CRASHES*, seriously.
 
-# Usage :
+## Usage :
 `git clone https://github.com/Hab5/42sh.git && cd 42sh && make && ./42sh`
 You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Syntax Tree) of your commands.  
 (see above screenshot)
 
-# Objectives:
+## Objectives:
 
 - Advanced line edition with the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html).
 - Lexical analysis ("Lexing")
@@ -61,7 +61,7 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 - History expansion: `!!`, `!-number`, `!number`, `!word`.
 - History management: persistant history, iterative search, filtering (no doubles, `fc -s`, and similarly dangerous commands)
 
-# Bindings
+## Bindings
 
 |Binding                         |Effect                        |
 |--------------------------------|-----------------------------:|
@@ -79,7 +79,7 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 |`Ctrl+C`                        |**Discard the current input and prompt on a new line**|
 |`Ctrl+D`                        |**Exit**|
 
-# Cloc (Count Line Of Code):
+## Cloc (Count Line Of Code):
 
 ```
 334 text files.

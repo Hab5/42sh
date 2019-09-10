@@ -6,7 +6,7 @@ It is written in "pure" C, we strictly limited our use of libraries (still allow
 *NO LEAKS, NO CRASHES*, seriously.
 
 ## Usage :
-`git clone https://github.com/Hab5/42sh.git && cd 42sh && make && ./42sh`
+`git clone https://github.com/Hab5/42sh.git && cd 42sh && make && ./42sh`  
 You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Syntax Tree) of your commands.  
 (see above screenshot)
 
@@ -58,8 +58,16 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
   - `<key>=<value>`
   - `unset`
 - Advanced variables, tilde, and parameters [expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02).
-- History expansion: `!!`, `!-number`, `!number`, `!word`.
-- History management: persistant history, iterative search, filtering (no doubles, `fc -s`, and similarly dangerous commands)
+
+- History management:
+  - Persistant history.
+  - Iterative search
+  - History expansion:
+    -`!!` 
+    -`!-number`
+    -`!number`
+    -`!word`.
+  - Filtering (no doubles, `fc -s`, and similarly dangerous commands)
 
 ## Bindings
 

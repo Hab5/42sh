@@ -63,10 +63,10 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
   - Persistant history.
   - Iterative search
   - History expansion:
-    -`!!` 
-    -`!-number`
-    -`!number`
-    -`!word`.
+    `!!` 
+    `!-number`
+    `!number`
+    `!word`.
   - Filtering (no doubles, `fc -s`, and similarly dangerous commands)
 
 ## Bindings

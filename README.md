@@ -1,35 +1,63 @@
 ## 42sh  
 <img src="screenshots/screenshot.png" width="400" height="450">
-42sh is a complete shell coded from scratch with a couple friends from the 42 school in Paris.  
-We only used necessary functions from libraries : (malloc, free, write, dup2, etc.) everything else was coded from scratch, like printf, <string.h> and such.  
-No leaks, no crashes. (Satisfied or reimbursed!)
 
 # Usage :
-
 `git clone https://github.com/Hab5/42sh.git && cd 42sh && make && ./42sh`
+You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Syntax Tree) of your commands.  
+(see above screenshot)
 
-You can use `./42sh --ast` to see the AST (Abstract Syntax Tree) for each command you type (like in the screenshot above).
+# Objectives:
 
-# Features :
+- Advanced line edition with the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html).
+- Lexical analysis ("Lexing")
+- Semantic analysis ("Parsing")
+- Abstract Syntax Tree ("AST") population.
+- AST Interpretation.
+- Environment management.
+- PATH management.
+- Management of processes and their interactions.
+- Terminal management.
+- File descriptors management.
 
-- Line Edition  
-- Builtins  
-- Environment gestion  
-- Hash Table  
-- Job Control  
-- Inhibitions  
-- Advanced expansion  
-- Signals handling  
-- Pipe/Redirection/File description aggregation  
-- Heredoc
-- Iterative search in the history.
-- Text Selection
-- A lot of other stuff I forgot.
+## Features
 
+- Command execution
+- Line edition with the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html) (see `Bindings`)
+- Job control: `jobs`, `fg`, `bg` and `&`.
+- Redirections: `>`, `>>`, `<`, `<<`, `>&`, `<&`, `>&-` and `<&-`.
+- Command delimitors: `;`, `|`.
+- Logical operators: `|`, `||`, and `&&`.
+- POSIX compliant builtins:
+ - `cd`
+ - `echo`
+ - `type`
+ - `exit`
+ - `alias`
+ - `hash`
+ - `fc`
+- Non-POSIX compliant builtins:
+ - `test` with flags: `-b`, `-c`, `-d`, `-e`, `-f`, `-g`, `-L`, `-p`, `-r`, `-S`, `-s`, `-u`, `-w`, `-x`, `-z`, `=`, `!=`, `-eq`, `-ne`, `-ge`, `-lt`, `-le` and `!`.
+- Signal handling (all of them).
+- Inhibition: `'`, `"` and `\` alongside reprompt (+heredoc): 
+  ```
+  $> echo 'Hello,\
+  backslash> World
+  quote> ' "!
+  dquote> "
+
+  Hello,
+  World!
+  ```
+- Internal shell variables management:
+ - `set`
+ - `export`
+ - `<key>=<value>`
+ - `unset`
+- Advanced variables, tilde, and parameters [expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02).
+- History expansion: `!!`, `!-number`, `!number`, `!word`.
+- History management: persistant history, iterative search, filtering (no doubles, `fc -s`, and similarly dangerous commands)
 
 # Bindings
-
-Use of the termcaps library (40 years old, really bad overall, but follows our philosophy of doing everything from scratch, or with really low level functions)
 
 |Binding                         |Effect                        |
 |--------------------------------|-----------------------------:|
@@ -46,20 +74,6 @@ Use of the termcaps library (40 years old, really bad overall, but follows our p
 |`Ctrl+R`                        |**Iterative search in the history**|
 |`Ctrl+C`                        |**Discard the current input and prompt on a new line**|
 |`Ctrl+D`                        |**Exit**|
-  
-Also handles quote, dquote, backslash, heredoc reprompt. (Inhibition)
-
-# Redirections/Operators
--Redirections/Operators :
-
-`>`, `>>`, `<<`, `<`, `&>`, `>&`, `>&-`, `<&`, `<&-`  
-`;` ,`&&`, `||`, `|`, `&`
-
-# Builtins :
-
-`cd`, `echo`, `exit`, `hash`, `type`, `test`, `alias/unalias`, `fc`, `jobs`, `fg`, `bg`, `env`, `setenv`, `unsetenv`, `set`, `unset`, `export`  
-
-All builtins follow the posix norm.
 
 # Cloc :
 

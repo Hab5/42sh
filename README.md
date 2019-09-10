@@ -30,7 +30,7 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 - Job control: `jobs`, `fg`, `bg` and `&`.
 - Redirections: `>`, `>>`, `<`, `<<`, `>&`, `<&`, `>&-` and `<&-`.
 - Command delimitors: `;`, `|`.
-- Logical operators: `|`, `||`, and `&&`.
+- Logical operators: `||`, and `&&`.
 - POSIX compliant builtins:
   - `cd`
   - `echo`

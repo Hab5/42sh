@@ -28,31 +28,31 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 - Command delimitors: `;`, `|`.
 - Logical operators: `|`, `||`, and `&&`.
 - POSIX compliant builtins:
- - `cd`
- - `echo`
- - `type`
- - `exit`
- - `alias`
- - `hash`
- - `fc`
+  - `cd`
+  - `echo`
+  - `type`
+  - `exit`
+  - `alias`
+  - `hash`
+  - `fc`
 - Non-POSIX compliant builtins:
  - `test` with flags: `-b`, `-c`, `-d`, `-e`, `-f`, `-g`, `-L`, `-p`, `-r`, `-S`, `-s`, `-u`, `-w`, `-x`, `-z`, `=`, `!=`, `-eq`, `-ne`, `-ge`, `-lt`, `-le` and `!`.
 - Signal handling (all of them).
 - Inhibition: `'`, `"` and `\` alongside reprompt (+heredoc): 
-  ```
-  $> echo 'Hello,\
-  backslash> World
-  quote> ' "!
-  dquote> "
+    ```
+    $> echo 'Hello,\
+    backslash> World
+    quote> ' "!
+    dquote> "
 
-  Hello,
-  World!
-  ```
+    Hello,
+    World!
+    ```
 - Internal shell variables management:
- - `set`
- - `export`
- - `<key>=<value>`
- - `unset`
+  - `set`
+  - `export`
+  - `<key>=<value>`
+  - `unset`
 - Advanced variables, tilde, and parameters [expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02).
 - History expansion: `!!`, `!-number`, `!number`, `!word`.
 - History management: persistant history, iterative search, filtering (no doubles, `fc -s`, and similarly dangerous commands)

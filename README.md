@@ -1,5 +1,9 @@
-## 42sh  
 <img src="screenshots/screenshot.png" width="400" height="450">
+
+# 42sh
+42sh is a complete shell coded from scratch with a couple friend from the 42 school in Paris.  
+It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()` and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such)  
+*NO LEAKS, NO CRASHES*, seriously.
 
 # Usage :
 `git clone https://github.com/Hab5/42sh.git && cd 42sh && make && ./42sh`
@@ -75,7 +79,7 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 |`Ctrl+C`                        |**Discard the current input and prompt on a new line**|
 |`Ctrl+D`                        |**Exit**|
 
-# Cloc :
+# Cloc (Count Line Of Code):
 
 ```
 334 text files.

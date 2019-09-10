@@ -2,7 +2,7 @@
 
 # 42sh
 42sh is a complete shell coded from scratch with a couple friend from the 42 school in Paris.  
-It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()` and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such)  
+It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()`, etc.) and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such)  
 *NO LEAKS, NO CRASHES*, seriously.
 
 ## Usage :

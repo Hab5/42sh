@@ -2,7 +2,7 @@
 
 # 42sh
 42sh is a complete shell coded from scratch with a couple friend from the 42 school in Paris.  
-It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()`, etc.) and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such)  
+It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()`, etc.) and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such). The only non-standard library used is the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html), but it's 40 years old, and definitely low level.  
 *NO LEAKS, NO CRASHES*, seriously.
 
 ## Usage :

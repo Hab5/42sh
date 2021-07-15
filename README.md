@@ -1,4 +1,4 @@
-<img src="screenshots/screenshot.png" width="400" height="450">
+<img src="screenshots/screenshot.png" width="450" height="450">
 
 # 42sh
 42sh is a complete shell coded from scratch with a couple friend from the 42 school in Paris.  

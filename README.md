@@ -2,7 +2,7 @@
 
 # 42sh
 42sh is a complete shell coded from scratch with a couple friend from the 42 school in Paris.  
-It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()`, etc.) and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such). The only non-standard library used is the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html), but it's 40 years old, and definitely low level.  
+It is written in "pure" C, we strictly limited our use of libraries (still allowing ourselves to use `malloc()`, `free()`, `dup2()`, etc.) and rewrote everything that can reasonably be rewritten (90% of the standard libraries, including `printf` and such), with the exception of the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html) to manipulate the terminal.
 *NO LEAKS, NO CRASHES*, seriously.
 
 ## Usage :
@@ -15,8 +15,8 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
 - Advanced line edition with the [Termcaps Library](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_mono/termcap.html).
 - Lexical analysis ("Lexing")
 - Semantic analysis ("Parsing")
-- Abstract Syntax Tree ("AST") population.
-- AST Interpretation.
+- Abstract Syntax Tree population.
+- Abstract Syntax Tree interpretation.
 - Environment management.
 - PATH management.
 - Management of processes and their interactions.
@@ -41,7 +41,7 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
   - `fc`
 - Non-POSIX compliant builtins:
  - `test` with flags: `-b`, `-c`, `-d`, `-e`, `-f`, `-g`, `-L`, `-p`, `-r`, `-S`, `-s`, `-u`, `-w`, `-x`, `-z`, `=`, `!=`, `-eq`, `-ne`, `-ge`, `-lt`, `-le` and `!`.
-- Signal handling (all of them).
+- Signal handling (all).
 - Inhibition: `'`, `"` and `\` alongside reprompt (+heredoc): 
     ```
     $> echo 'Hello,\
@@ -58,7 +58,6 @@ You can use `--ast` or `-a` (e.g `./42sh --ast`) to display the AST (Abstract Sy
   - `<key>=<value>`
   - `unset`
 - Advanced variables, tilde, and parameters [expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02).
-
 - History management:
   - Persistant history.
   - Iterative search
